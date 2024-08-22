@@ -18,3 +18,51 @@ After completing the subject Computer-Science Lab. 3, I was assigned the task of
 **JWT** (JSON Web Token) is a compact, URL-safe means of representing claims to be transferred between two parties. It is commonly used for authentication and authorization in web applications.
 
 **npm** (Node Package Manager) is the default package manager for Node.js. It allows developers to install, manage, and share packages of code. It also helps in managing project dependencies.
+
+## Getting started
+We are going to need [Node.js](https://nodejs.org/en), to initialize our [package.JSON](https://docs.npmjs.com/cli/v10/configuring-npm/package-json), crucial to create a workflow. I chosed the **CMD** as my preferential console.
+
+```console
+npm init -y
+```
+
+In the <mark>hello-world</mark> directory, the <mark>hello-world-node.js</mark> will open the first exchange of data between the server and a client.
+
+```console
+node /hello-world/hello-world-node.js
+```
+
+You should have a nice output in your console, let's close the connection for the moment.
+
+Now let's install [Express](https://expressjs.com/en/starter/installing.html) 
+
+```console
+npm i express
+```
+
+We have the <mark>hello-world-express.js</mark>, useful in this moment to test if we have succesfully installed Express.
+
+```console
+node /hello-world/hello-world-express.js
+```
+
+Again a lovely output in the console, awesome, now he have all the server side dependencies, that we need. It's time for the database management.
+
+Let's close the connection and install the [MySQL](https://github.com/mysqljs/mysql) dependency.
+
+```console
+npm i mysql
+```
+
+You are going to run into trouble right away, there are some configs to do in MySQL because this dependency is not an official project, TODO...
+
+Once you find the solution, let's run the <mark>connection-test-mysql.js</mark>
+
+```console
+node /hello-world/connection-test-mysql.js
+```
+
+We should see a nice output right there. We are going to use the [connection pool](https://github.com/mysqljs/mysql?tab=readme-ov-file#pooling-connections) from now on. As we see at the <mark>connection-test-mysql-pooling.js</mark>.
+
+
+
