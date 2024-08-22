@@ -20,7 +20,7 @@ After completing the subject Computer-Science Lab. 3, I was assigned the task of
 **npm** (Node Package Manager) is the default package manager for Node.js. It allows developers to install, manage, and share packages of code. It also helps in managing project dependencies.
 
 ## Getting started
-We are going to need [Node.js](https://nodejs.org/en), to initialize our [package.JSON](https://docs.npmjs.com/cli/v10/configuring-npm/package-json), crucial to create a workflow. I chosed the **CMD** as my preferential console.
+We are going to need [Node.js](https://nodejs.org/en), to initialize our [package.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-json), crucial to create a workflow. I chosed the **CMD** as my preferential console.
 
 ```console
 npm init -y
@@ -66,6 +66,9 @@ We should see a nice output right there. We are going to use the [connection poo
 
 It's time to run our **SQL** script with the file <mark>MySQLScript.sql</mark>, I used MySQL Workbench.
 
+![Captura de pantalla 2024-08-22 200534](https://github.com/user-attachments/assets/5d0207d5-5f11-49c0-9b53-234b60425339)
+
+
 Perfect, the <mark>index.js</mark> will be our main from now on, working in the endpoints and routes, with the HTTPs methods to place the data. The most simple example is the GET method were we get all the movies through Postman management.
 
 `GET http://localhost:3000/peliculas/todas`
@@ -97,6 +100,9 @@ node index.js
 ]
 ```
 
+![Captura de pantalla 2024-08-21 162224](https://github.com/user-attachments/assets/3b8f9c8e-d930-45f1-b7ab-2f05511b7698)
+
+
 Finally, the last part of the project is going to be the authentication and the authorization of the users to have access to certains parts of the app and not so as an admin, using **JWT** after installing it.
 
 ```console
@@ -109,3 +115,36 @@ Let's run <mark>jwt-example.js</mark> for testing that everything got installed.
 node /hello-world/jwt-example-js
 ```
 
+After testing
+
+`GET http://localhost:3000/protected`
+
+Copying the Auth Header
+
+`Authorization Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub21icmVVc3VhcmlvIjoiYWRtaW4iLCJpYXQiOjE3MjQzNjU3NDAsImV4cCI6MTcyNDM2OTM0MH0.i7QPhaSN0zc1nLuILmIWaLT3jQ1S6rvJcgD6oykC5xs`
+
+![Captura de pantalla 2024-08-21 162328](https://github.com/user-attachments/assets/a355d2f0-72bc-43cd-8a05-db31b72678c8)
+
+
+Getting access 
+
+```js
+{
+    "message": "Tenés acceso."
+}
+```
+
+![Captura de pantalla 2024-08-21 162435](https://github.com/user-attachments/assets/c95e4c52-89fb-4795-85ed-c452777ef5d6)
+
+
+## Conclution
+This little project is perfect for those who are trying to understand Backend Development and the conceptual part, with key values like server, HTTPs, endpoints, routes, request and responses. 
+
+Data concepts like SQL, json, body-parsers, connection-pool, query. 
+
+Security in the form of authentication and authorization, tokes, expired tokens, bearer, verifying tokens, all access data and protected data.
+
+The JavaScript syntax wich I nedded to learn was the Callback functions for example next(), important in the way this libraries work.
+
+## What's next
+I will refactorize the code and try to find the right and minimal syntax. Stay tuned for the v2 of this project, with more fundaments of backend!
