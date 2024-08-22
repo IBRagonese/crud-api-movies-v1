@@ -64,5 +64,48 @@ node /hello-world/connection-test-mysql.js
 
 We should see a nice output right there. We are going to use the [connection pool](https://github.com/mysqljs/mysql?tab=readme-ov-file#pooling-connections) from now on. As we see at the <mark>connection-test-mysql-pooling.js</mark>.
 
+It's time to run our **SQL** script with the file <mark>MySQLScript.sql</mark>, I used MySQL Workbench.
 
+Perfect, the <mark>index.js</mark> will be our main from now on, working in the endpoints and routes, with the HTTPs methods to place the data. The most simple example is the GET method were we get all the movies through Postman management.
+
+`GET http://localhost:3000/peliculas/todas`
+
+```console
+node index.js
+```
+
+```js
+[
+    {
+        "Id": 1,
+        "Nombre": "Forrest Gump",
+        "Lanzamiento": "1994",
+        "Genero": "Comedia/Romance"
+    },
+    {
+        "Id": 2,
+        "Nombre": "Sully",
+        "Lanzamiento": "2016",
+        "Genero": "Drama"
+    },
+    {
+        "Id": 3,
+        "Nombre": "Terminator",
+        "Lanzamiento": "1984",
+        "Genero": "Accion/Ciencia Ficcion"
+    }
+]
+```
+
+Finally, the last part of the project is going to be the authentication and the authorization of the users to have access to certains parts of the app and not so as an admin, using **JWT** after installing it.
+
+```console
+npm i jasonwebtoken
+```
+
+Let's run <mark>jwt-example.js</mark> for testing that everything got installed.
+
+```console
+node /hello-world/jwt-example-js
+```
 
